@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".BusFragment">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_plus" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -21,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
-
+<!--            여기 아래부분부터 즐겨찾기한 버스나 정류장이 들어갈 수 있게 짜야함-->
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
