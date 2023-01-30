@@ -7,65 +7,10 @@
     tools:context=".MainActivity">
 
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/toolbar_main"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include">
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabBus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="버스"
-            tools:layout_editor_absoluteX="6dp"
-            tools:layout_editor_absoluteY="258dp" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabSubway"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="지하철"
-            tools:layout_editor_absoluteX="133dp"
-            tools:layout_editor_absoluteY="-5dp" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabNav"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="길찾기" />
-
-    </com.google.android.material.tabs.TabLayout>
-
-    <FrameLayout
-        android:id="@+id/mainFrame"
-        android:layout_width="410dp"
-        android:layout_height="634dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
-        app:layout_constraintVertical_bias="0.0">
-
-    </FrameLayout>
-
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,6 +35,52 @@
             android:gravity="center"
             android:text="DRAWER"
             android:textSize="40dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/toolbar_main" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabBus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="버스"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="258dp" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabSubway"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="지하철"
+                    tools:layout_editor_absoluteX="133dp"
+                    tools:layout_editor_absoluteY="-5dp" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabNav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="길찾기" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <FrameLayout
+                android:id="@+id/mainFrame"
+                android:layout_width="410dp"
+                android:layout_height="634dp">
+
+            </FrameLayout>
+        </LinearLayout>
 
     </androidx.drawerlayout.widget.DrawerLayout>
 
