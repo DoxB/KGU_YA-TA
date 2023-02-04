@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+<!-- 사이드 메뉴바 헤드/메뉴중 메뉴 구성한 레이아웃-->
+<!-- item 별로 id 맞게 고쳐야 함-->
+    <item
+        android:id="@+id/menu_gallery"
+        android:title="마지 심슨"
+        android:icon="@drawable/simpson1"
+        />
+    <item
+        android:id="@+id/menu_photo"
+        android:title="바트 심슨"
+        android:icon="@drawable/simpson2"
+        />
+    <item
+        android:id="@+id/menu_send"
+        android:title="리사 심슨"
+        android:icon="@drawable/simpson3"
+        />
+    <item
+        android:id="@+id/menu_search"
+        android:title="호머 심슨"
+        android:icon="@drawable/simpson4"
+        />
+
+    </group>
+
+</menu>

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+//클릭시 Gravity.left는 android:layout_gravity="left"인 View나 Layout을 감지하여 옆으로 연다
                 if(!drawer.isDrawerOpen(Gravity.LEFT)){
                     drawer.openDrawer(Gravity.LEFT);
                 }
