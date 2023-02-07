@@ -1,100 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="10dp">
 
-
-    <androidx.drawerlayout.widget.DrawerLayout
-        android:id="@+id/drawer"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-<!--     드로어 레이아웃에서 클릭 시에 나오는 메뉴-->
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/navigationView"
-            fitsSystemWindows="false"
-            android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:layout_gravity="left"
-            app:headerLayout="@layout/drawer_header"
-            app:menu="@menu/drawer_menu"
-            />
-<!--위에 주석을 달면 .. app:headerLayout은 헤더 , app:menu는 메뉴를 include한 느낌-->
+            android:hint="enter text to search"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="search"
+            android:textSize="12sp"
+            android:onClick="mOnClick"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <TextView
-            android:id="@+id/tv_contents"
+            android:id="@+id/result"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textSize="8sp"
+            android:textStyle="bold"/>
 
-            android:gravity="center"
-            android:text="CONTENTS"
-            android:textSize="40dp" />
-
-<!--        <TextView-->
-<!--            android:id="@+id/tv_drawer"-->
-<!--            android:layout_width="240dp"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_gravity="left"-->
-<!--            android:background="#FFFFFF"-->
-<!--            android:gravity="center"-->
-<!--            android:text="DRAWER"-->
-<!--            android:textSize="40dp"/>-->
-
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <include
-                android:id="@+id/include"
-                layout="@layout/toolbar_main" />
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabLayout"
-                android:layout_width="409dp"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/tabBus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="버스"
-                    tools:layout_editor_absoluteX="6dp"
-                    tools:layout_editor_absoluteY="258dp" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/tabSubway"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="지하철"
-                    tools:layout_editor_absoluteX="133dp"
-                    tools:layout_editor_absoluteY="-5dp" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/tabNav"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="길찾기" />
-
-            </com.google.android.material.tabs.TabLayout>
-
-            <FrameLayout
-                android:id="@+id/mainFrame"
-                android:layout_width="410dp"
-                android:layout_height="634dp">
-
-            </FrameLayout>
-        </LinearLayout>
-
-    </androidx.drawerlayout.widget.DrawerLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
